@@ -1,0 +1,253 @@
+/* ========== NAVIGATION BAR ========== */
+.navbar {
+    width: 100%;
+    background-color: #2b2a28;
+    border-bottom: 2px solid #c9b07c;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-title {
+    color: #f2e2b3;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e6d8ad;
+    font-size: 16px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #e6d8ad;
+}
+
+/* Reset & global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #1d1b1a; /* dark brownish */
+    color: #e3d7c1; /* cream text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+a {
+    color: #c9b07c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f2e2b3;
+}
+
+/* Container for page content */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Boxes for content */
+.box {
+    background-color: #2b2a28;
+    border: 1px solid #3e3c37;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px #00000080;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #f2e2b3;
+    margin-bottom: 15px;
+}
+
+/* Images */
+.profile-pic {
+    width: 200px;
+    border-radius: 100%;
+    border: 3px solid #c9b07c;
+    margin-bottom: 15px;
+}
+
+.hobby-pic {
+    width: 150px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid #c9b07c;
+}
+
+/* Buttons (for career/hobbies popups) */
+.button {
+    background-color: #3e3c37;
+    color: #f2e2b3;
+    border: 1px solid #c9b07c;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #c9b07c;
+    color: #2b2a28;
+}
+
+/* Popup content */
+.popup {
+    display: none;
+    background-color: #2b2a28;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #3e3c37;
+    border-radius: 5px;
+}
+/* ===== Resume Layout Enhancements ===== */
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.resume-left ul,
+.resume-right ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #3e3c37;
+    margin: 18px 0;
+    border-radius: 2px;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #c9b07c;
+    color: #2b2a28;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border: 1px solid #e6d8ad;
+}
+
+.download-btn:hover {
+    background-color: #f2e2b3;
+    color: #1d1b1a;
+}
+
+/* Mobile responsive */
+@media(max-width: 800px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------------------------
+   GAME PAGE STYLES
+---------------------------------------------------- */
+
+/* Main Game Container */
+#game-area {
+    width: 100%;
+    max-width: 700px;        /* keeps game centered & sized nicely */
+    height: 420px;
+    margin: 20px auto;
+    background: #111;        /* dark neutral to match your theme */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ffc107; /* subtle yellow border */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+}
+
+/* Yellow Falling Star */
+.star {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #ffe680 0%, #ffca00 70%, #ffb100 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 221, 79, 0.9), 
+                0 0 25px rgba(255, 200, 0, 0.6);
+    animation: glow 1.2s infinite ease-in-out alternate;
+}
+
+/* Star Glow Animation */
+@keyframes glow {
+    from { box-shadow: 0 0 10px gold; }
+    to   { box-shadow: 0 0 20px yellow; }
+}
+
+/* Start Button */
+#startBtn {
+    background: #ffc107;
+    border: none;
+    padding: 12px 22px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-bottom: 15px;
+}
+
+#startBtn:hover {
+    background: #ffdb4d;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 220, 100, 0.7);
+}
+
+/* Score Style */
+#score {
+    font-weight: bold;
+    color: #ffc107;
+    font-size: 1.3rem;
+}
+
+/* Card Container (keeps your visual theme) */
+.card {
+    background: #1c1c1c;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 235, 167, 0.12);
+    border: 1px solid rgba(255, 215, 90, 0.2);
+}
+
+/* Responsive Game Area */
+@media (max-width: 600px) {
+    #game-area {
+        height: 350px;
+    }
+    .star {
+        width: 32px;
+        height: 32px;
+    }
+}
