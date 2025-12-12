@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career | Portfolio</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script>
+        function showCareer(section) {
+            const sections = document.querySelectorAll('.career-desc');
+            sections.forEach(s => s.style.display = 'none');
+
+            const active = document.getElementById(section + "-desc");
+            active.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <h2 class="nav-title">Iiman Hersi</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="career.html" class="active">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
+
+    <div class="container box">
+
+        <section class="card">
+            <h1>Career Interests</h1>
+            <p>Click a company below to view detailed information about why I am interested in working there.</p>
+
+            <button class="button" onclick="showCareer('mayo')">Mayo Clinic</button>
+            <button class="button" onclick="showCareer('allina')">Allina Health</button>
+        </section>
+
+        <!-- Mayo Clinic -->
+        <section id="mayo-desc" class="box career-desc" style="display:none;">
+            <h2>Mayo Clinic</h2>
+
+            <p><strong>Contact:</strong> 200 First St SW, Rochester, MN 55905<br>
+            Phone: (507) 284-2511<br>
+            Email: hr@mayoclinic.org</p>
+
+            <h3>Why I like this opportunity</h3>
+            <p>Mayo Clinic is one of the top healthcare institutions in the world. I admire their dedication to patient-centered care, innovation, and leadership in healthcare management. Working here would give me hands-on experience with hospital operations, patient services, and leadership development within a world-renowned system.</p>
+
+            <h3>My Qualifications</h3>
+            <ul>
+                <li>Officer of Marketing and Social Outreach for the Student Healthcare Management Association</li>
+                <li>Experience coordinating outreach projects, managing communications, and engaging with healthcare professionals</li>
+                <li>PCA certification giving me direct patient care exposure</li>
+            </ul>
+
+            <h3>Skills Alignment</h3>
+            <p>My leadership, communication, teamwork, and organizational skills align well with Mayo Clinic’s values of collaboration and excellence.</p>
+        </section>
+
+        <!-- Allina Health -->
+        <section id="allina-desc" class="box career-desc" style="display:none;">
+            <h2>Allina Health</h2>
+
+            <p><strong>Contact:</strong> 2925 Chicago Ave S, Minneapolis, MN 55407<br>
+            Phone: (612) 262-7777<br>
+            Email: hr@allina.com</p>
+
+            <h3>Why I like this opportunity</h3>
+            <p>Allina Health’s strong commitment to community-focused healthcare is one of the biggest reasons I am interested in their internships and career pathways. They prioritize accessibility, patient support, and healthcare equity — areas that deeply align with my personal values.</p>
+
+            <h3>My Qualifications</h3>
+            <ul>
+                <li>Experience in student healthcare organizations and leadership roles</li>
+                <li>Volunteer work in elementary school settings and community-based support programs</li>
+                <li>PCA certification and hands-on experience with patient needs</li>
+            </ul>
+
+            <h3>Skills Alignment</h3>
+            <p>My adaptability, communication, problem-solving, and teamwork skills match Allina Health’s mission to deliver compassionate, high-quality care to multiple communities.</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
